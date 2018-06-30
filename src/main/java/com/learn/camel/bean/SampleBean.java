@@ -2,7 +2,8 @@ package com.learn.camel.bean;
 
 public class SampleBean {
 
-    public String Map(String input){
+    // this name (map) should map with the name given in the route
+    public String map(String input){
        return input.replace("-","*");
     }
 }
