@@ -1,7 +1,5 @@
-*/target/**
-.gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
+target/
+!.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
 .apt_generated
@@ -16,7 +14,7 @@
 *.iws
 *.iml
 *.ipr
-*/target/**
+*.log
 
 ### NetBeans ###
 nbproject/private/
@@ -25,8 +23,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
-/out/
-/classes
-/logs
-.DS_Store
