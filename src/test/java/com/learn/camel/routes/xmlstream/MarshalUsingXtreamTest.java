@@ -24,7 +24,7 @@ public class MarshalUsingXtreamTest extends CamelTestSupport {
         e.setFirstName("Sumit");
         e.setLastName("Shenoy");
 
-        Employee actualEmployee = (Employee)template.requestBody("direct:inputString", input); 
+        Employee actualEmployee = (Employee)template.requestBody("direct:inputString", input);
         assertEquals(e.getAge(), actualEmployee.getAge());
         assertEquals(e.getFirstName(),actualEmployee.getFirstName());
         assertEquals(e.getLastName(),actualEmployee.getLastName());
