@@ -22,6 +22,6 @@ public class UnMarshalUsingGsonTest extends CamelTestSupport{
         Employee employee = (Employee)template.requestBody("direct:input", employeeJson);
 
 
-        System.out.println((employee.getAge()));
+        assertEquals(employee.getAge(),"12");
     }
 }

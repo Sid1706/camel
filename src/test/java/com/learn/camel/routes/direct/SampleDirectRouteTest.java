@@ -21,7 +21,7 @@ public class SampleDirectRouteTest extends CamelTestSupport {
         Thread.sleep(5000);
 
         File file = new File("sampleOutput");
-        assertEquals(1, file.listFiles().length);
+        assertEquals(2, file.listFiles().length);
 
         Exchange exchange = consumer.receive("file:sampleOutput");
         assertEquals(exchange.getIn().getHeader("CamelFileName"),"output.txt");

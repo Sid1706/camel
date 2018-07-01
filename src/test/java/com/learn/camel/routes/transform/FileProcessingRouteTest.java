@@ -16,13 +16,15 @@ public class FileProcessingRouteTest extends CamelTestSupport {
     @Test
     public void SamepleDirectMockTest() throws InterruptedException {
 
-        String input = "Hello:Bangalore:We love you";
+        String input = "Hello-Bangalore-We love you";
+
+        String expected = "Hello:Bangalore:We love you";
 
         MockEndpoint mock = getMockEndpoint("mock:outPut");
-        mock.expectedBodiesReceived(input);
+        mock.expectedBodiesReceived(expected);
 
         Thread.sleep(2000);
-        template.sendBody("direct:SampleInput", "Hello-Bangalore-We love you");
+        template.sendBody("direct:SampleInput", input);
 
 
         assertMockEndpointsSatisfied();
